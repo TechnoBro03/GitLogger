@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gitlogger.schema.json",
+  "title": "GitLogger Commits File",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "generated_at", "filters", "commits", "sources"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "filters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "name", "author", "email", "message", "since", "until", "all_refs"],
+      "properties": {
+        "source": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": ["string", "null"]
+        },
+        "author": {
+          "type": ["string", "null"]
+        },
+        "email": {
+          "type": ["string", "null"]
+        },
+        "message": {
+          "type": ["string", "null"]
+        },
+        "since": {
+          "type": ["string", "null"]
+        },
+        "until": {
+          "type": ["string", "null"]
+        },
+        "all_refs": {
+          "type": "boolean"
+        }
+      }
+    },
+    "commits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "source",
+          "sourcePath",
+          "hash",
+          "authored_at",
+          "author_name",
+          "author_email",
+          "subject",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "length": 40
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourcePath": {
+            "type": "string"
+          },
+          "hash": {
+            "type": "string",
+            "length": 40
+          },
+          "authored_at": {
+            "type": "string"
+          },
+          "author_name": {
+            "type": "string"
+          },
+          "author_email": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "message": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "path"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
