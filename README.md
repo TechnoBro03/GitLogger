@@ -1,7 +1,7 @@
 # Git Logger
 
-[![Version](https://img.shields.io/pypi/v/gitlogger)](https://pypi.org/project/gitlogger/)
-![Python](https://img.shields.io/pypi/pyversions/gitlogger)
+[![Version](https://img.shields.io/pypi/v/gitlogger)](https://pypi.org/project/gitlogger-cli/)
+![Python](https://img.shields.io/pypi/pyversions/gitlogger-cli)
 ![MyPy](https://img.shields.io/badge/mypy-checked-blue)
 ![License](https://img.shields.io/github/license/TechnoBro03/gitlogger)
 
