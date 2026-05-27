@@ -71,7 +71,7 @@ class CommitFile:
 	"""The commits included in the commits file."""
 	sources: list[SourceInfo]
 	"""The source repositories matched during export."""
-	schema: str = "https://github.com/TechnoBro03/GitLogger/blob/main/gitlogger.schema.json"
+	schema: str = "https://raw.githubusercontent.com/TechnoBro03/GitLogger/refs/heads/main/gitlogger.schema.json"
 	"""The schema file used to validate the commits file."""
 
 @dataclass(frozen=True)
